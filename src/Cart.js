@@ -1,5 +1,6 @@
 import React from "react";
 import { useCart } from "react-use-cart";
+import { NavLink } from 'react-router-dom';
 
 const Cart = () => {
     const {
@@ -14,7 +15,14 @@ const Cart = () => {
     } = useCart();
     if (isEmpty) return <h1 className="text-center" >Your Cart is Empty</h1>
     return (
+        
         <section className='py-4 container'>
+            <div>
+        <NavLink to='/cart' >cart</NavLink>
+        </div>
+        <div>
+        <NavLink to='/store' >store</NavLink> 
+        </div>
             <div className='row justify-content-center'>
                 <div className='col-12'>
                     <h5>Cart ({totalUniqueItems}) total Items: ({totalItems})</h5>
