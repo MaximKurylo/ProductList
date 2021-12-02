@@ -13,7 +13,17 @@ const Cart = () => {
         removeItem,
         emptyCart,
     } = useCart();
-    if (isEmpty) return <h1 className="text-center" >Your Cart is Empty</h1>
+    if (isEmpty) return (
+    <>
+            <h1 className="text-center" >Your Cart is Empty</h1>
+            <div>
+                <NavLink to='/cart' >cart</NavLink>
+            </div>
+            <div>
+                <NavLink to='/store' >store</NavLink>
+            </div>
+        </>
+        )
     return (
         
         <section className='py-4 container'>
